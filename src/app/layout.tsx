@@ -9,10 +9,14 @@ export const metadata: Metadata = {
   description: "",
 };
 
-function CreateLayout({ children }: Props) { // Adjusted the props destructuring here
- return (
-   <>{children}</>
- );
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
 }
-
-export { CreateLayout }; // Exporting CreateLayout 

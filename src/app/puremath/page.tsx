@@ -10,22 +10,9 @@ import {
   Table,
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
-import {myData} from "./data/data"
-interface Lecture {
-  name: string;
-  link: string;
-}
+import { myData } from "./data/data";
 
-interface Session {
-  session: string;
-  lectures: Lecture[];
-}
-
-interface Props {
-  sessions: Session[];
-}
-
-const Component: React.FC<Props> = ({ sessions }) => {
+const Component = () => {
   return (
     <div className="flex flex-col w-full min-h-screen">
       <header className="flex items-center h-16 px-4 border-b shrink-0 md:px-6">
@@ -39,15 +26,16 @@ const Component: React.FC<Props> = ({ sessions }) => {
           <Link className=" font-bold" href="/puremath">
             Pure Math
           </Link>
-          <Link className=" text-gray-500 dark:text-gray-400" href="/appliedmath">
+          <Link
+            className=" text-gray-500 dark:text-gray-400"
+            href="/appliedmath"
+          >
             Applied Math
           </Link>
         </nav>
         <div className="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
           <form className="flex-1 ml-auto sm:flex-initial">
-            <div className="grid grid-cols-3 gap-4">
-              
-            </div>
+            <div className="grid grid-cols-3 gap-4"></div>
           </form>
         </div>
       </header>
@@ -61,7 +49,7 @@ const Component: React.FC<Props> = ({ sessions }) => {
                 </TableRow>
               </TableHeader>
               <TableBody>
-              {myData.Sessions.map((session) => (
+                {myData.Sessions.map((session) => (
                   <div className="flex" key={session.session}>
                     <TableCell className="font-medium">
                       {session.session}
@@ -84,5 +72,3 @@ const Component: React.FC<Props> = ({ sessions }) => {
   );
 };
 export default Component;
-
-

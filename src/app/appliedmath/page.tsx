@@ -11,21 +11,9 @@ import {
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
 import { myData } from "./data/data";
-interface Lecture {
-  name: string;
-  link: string;
-}
 
-interface Session {
-  session: string;
-  lectures: Lecture[];
-}
 
-interface Props {
-  sessions: Session[];
-}
-
-const Component: React.FC<Props> = ({ sessions }) => {
+const Component = () => {
   return (
     <div className="flex flex-col w-full min-h-screen">
       <header className="flex items-center h-16 px-4 border-b shrink-0 md:px-6">
