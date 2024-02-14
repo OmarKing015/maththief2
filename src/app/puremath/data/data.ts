@@ -31,7 +31,7 @@ export const myData: SessionsData = {
         },
         {
           name: "PDF",
-          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/60404_print-2-4-23.pdf".
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/60404_print-2-4-23.pdf",
         },
         
       ],
