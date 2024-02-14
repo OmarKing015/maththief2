@@ -15,27 +15,26 @@ interface SessionsData {
 export const myData: SessionsData = {
   Sessions: [
     {
-      session: "Session 1",
+      session: " Arithmetic Sequence",
       lectures: [
         {
-          name: "Skills",
-          link: "https://iframe.mediadelivery.net/play/33074/d19cb330-4bb6-4f9b-adb5-ab32ccc594a7?autoplay=true",
+          name: "Explanation part 1",
+          link: "https://iframe.mediadelivery.net/play/33074/f022ef5e-c772-4962-82e2-ade0b50dd164",
         },
         {
-          name: "Explanation",
-          link: "https://iframe.mediadelivery.net/play/33074/56889c56-be70-46cd-aa14-36855a0b1399?autoplay=true",
+          name: "Explanation Part 2",
+          link: "https://iframe.mediadelivery.net/play/33074/e51b8c4d-a8f1-4dfd-a447-8dc18207d9ba",
         },
         {
-          name: "Problems",
-          link: "https://iframe.mediadelivery.net/play/33074/0efede62-36f0-41f5-a1fe-891b3d6c67de?autoplay=true",
+          name: "Class&Home Work",
+          link: "https://iframe.mediadelivery.net/play/33074/90ac8704-6af6-416a-bff0-b68b4c6c6d9c",
         },
         {
-          name: "Classwork",
-          link: "https://iframe.mediadelivery.net/play/33074/e383b4c3-964c-4835-8504-76567f0f7427?autoplay=true",
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/60404_print-2-4-23.pdf",
         },
+        
       ],
     },
-    // Add more sessions if needed
   ],
 };
-
