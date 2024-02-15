@@ -3,13 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build --output dist",
     "dev": "next dev",
-    "generate": "next generate",
-    "preview": "next preview",
-    "postinstall": "next prepare"
+    "build": "next build --output dist",
+    "start": "next start",
+    "lint": "next lint"
   },
-  
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-select": "^2.0.0",
