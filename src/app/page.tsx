@@ -39,9 +39,9 @@ export default function Component() {
           >
             <span className="">Math Thief</span>{" "}
           </Link>
-          <span className="text-red-500  absolute right-0 mr-8 " >
+         {isSignedIn && <span className="text-red-500  absolute right-0 mr-8 " >
             <SignOutButton/>
-          </span>
+          </span>}
         </nav>
         <div className="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
           <form className="flex-1 ml-auto sm:flex-initial">

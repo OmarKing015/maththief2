@@ -50,9 +50,9 @@ const router = useRouter()
             <Link className=" font-bold " href="/appliedmath">
               Applied Math
             </Link>
-            <span className="text-red-500  absolute right-0 mr-8 " >
-            <SignOutButton/>
-          </span>
+           
+            <button > <a href="/" className="text-red-500  absolute right-0 mr-8 " >Sign Out</a></button>
+          
           </nav>
           <div className="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
             <form className="flex-1 ml-auto sm:flex-initial">
