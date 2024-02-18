@@ -13,12 +13,22 @@ import {
   Table,
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
-import { SignIn, useAuth, useSignIn } from "@clerk/nextjs";
+import { SignIn, SignOutButton, useAuth, useClerk, useSignIn } from "@clerk/nextjs";
+import { useEffect } from "react";
 
 export default function Component() {
-  const { isSignedIn } = useAuth();
-  const { isLoaded, signIn } = useSignIn();
+ 
 
+  // function setCookie(name: string, value: string, minutes: number): void {
+  //   const date = new Date();
+  //   date.setTime(date.getTime() + minutes * 60 * 1000); // Add minutes to the current time
+  //   const expires = `expires=${date.toTimeString()}`;
+  //   document.cookie = `${name}=${value}; ${expires}; path=/`;
+  // }
+    const { isSignedIn } = useAuth();
+  const { isLoaded, signIn } = useSignIn();
+// 
+  
   return (
     <div className="flex flex-col w-full min-h-screen">
       <header className="flex items-center sm:gap-3 h-16 px-4 border-b shrink-0 md:px-6">
@@ -29,6 +39,9 @@ export default function Component() {
           >
             <span className="">Math Thief</span>{" "}
           </Link>
+          <span className="text-red-500  absolute right-0 mr-8 " >
+            <SignOutButton/>
+          </span>
         </nav>
         <div className="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
           <form className="flex-1 ml-auto sm:flex-initial">
@@ -72,6 +85,7 @@ export default function Component() {
             </div>
           </>
         )}
+       
       </div>
     </div>
   );

@@ -12,11 +12,14 @@ import {
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
 import { myData } from "./data/data";
-import  {useAuth, useSignIn}  from "@clerk/nextjs";
+import  {SignOutButton, useAuth, useClerk, useSignIn}  from "@clerk/nextjs";
 import { redirect } from "next/navigation";
+import { useEffect } from "react";
 const Component = () => {
   const { isLoaded, signIn } = useSignIn();
   const {isSignedIn} = useAuth()
+  const { signOut } = useClerk();
+
  if (!isLoaded) {
   return <div className="text-7xl text-center font-bold my-auto mx-auto">Loading...</div>
  }
@@ -39,6 +42,9 @@ const Component = () => {
           <Link className="text-gray-500 dark:text-gray-400 " href="/appliedmath">
             Applied Math
           </Link>
+          <span className="text-red-500  absolute right-0 mr-8 " >
+            <SignOutButton/>
+          </span>
         </nav>
         <div className="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
           <form className="flex-1 ml-auto sm:flex-initial">
