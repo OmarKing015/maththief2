@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import { Select } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
@@ -11,10 +12,19 @@ import {
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
 import { myData } from "./data/data";
-
+import  {useAuth, useSignIn}  from "@clerk/nextjs";
+import { redirect } from "next/navigation";
 const Component = () => {
-  return (
-    <div className="flex flex-col w-full min-h-screen">
+  const { isLoaded, signIn } = useSignIn();
+  const {isSignedIn} = useAuth()
+ if (!isLoaded) {
+  return <div className="text-7xl text-center font-bold my-auto mx-auto">Loading...</div>
+ }
+ if(isSignedIn){
+  console.log("Signed in")
+  return ( 
+   <div className="flex flex-col w-full min-h-screen">
+      
       <header className="flex items-center sm:gap-3 h-16 px-4 border-b shrink-0 md:px-6">
         <nav className="flex sm:gap-40 gap-6 text-lg font-medium md:flex last:md:items-center md:gap-5 md:text-sm lg:gap-6">
           <Link
@@ -69,6 +79,9 @@ const Component = () => {
         </div>
       </main>
     </div>
-  );
+  );}else{
+    redirect("/")
+  }
 };
+
 export default Component;

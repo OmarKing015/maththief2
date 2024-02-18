@@ -5,6 +5,7 @@
  */
 import Link from "next/link";
 import { Select } from "@/components/ui/select";
+import { dark } from "@clerk/themes";
 import { Button } from "@/components/ui/button";
 import {
   TableHead,
@@ -15,7 +16,7 @@ import {
   Table,
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
-
+import { SignIn } from "@clerk/nextjs";
 export default function Component() {
   return (
     <div className="flex flex-col w-full min-h-screen">
@@ -39,9 +40,10 @@ export default function Component() {
       <h1 className="mx-10 font-extrabold text-5xl my-10 ">
         Welcome to the Math Thief where we steal Math Sessions 😘😍
       </h1>
-<div className="text-center text-4xl gap-16 flex mx-auto">
-  <Link href="/puremath" className="font-bold text-gray-400 hover:text-white">Pure Math</Link>
-  <Link href="/appliedmath" className="font-bold text-gray-400 hover:text-white">Applied Math</Link>
+<div className="text-center items-center text-4xl gap-16 flex mx-auto">
+<SignIn appearance={{ elements: { footer: "hidden" } }}/>
+  {/* <Link href="/puremath" className="font-bold text-gray-400 hover:text-white">Pure Math</Link> */}
+  {/* <Link href="/appliedmath" className="font-bold text-gray-400 hover:text-white">Applied Math</Link> */}
 </div>
 
       
