@@ -17,7 +17,14 @@ import { SignIn, SignOutButton, useAuth, useClerk, useSignIn } from "@clerk/next
 import { useEffect } from "react";
 
 export default function Component() {
- 
+ const {signOut} = useAuth();
+useEffect(() => {
+  signOut()
+
+  return () => {
+    
+  }
+}, [])
 
   // function setCookie(name: string, value: string, minutes: number): void {
   //   const date = new Date();
