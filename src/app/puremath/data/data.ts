@@ -36,5 +36,23 @@ export const myData: SessionsData = {
         
       ],
     },
+    {
+      session: " Arithmetic Series",
+      lectures: [
+        {
+          name: "Explanation",
+          link: "https://iframe.mediadelivery.net/play/33074/57ece03e-d1be-46da-a0ab-ac30648cb207",
+        },
+        {
+          name: "Class&Home Work",
+          link: "https://iframe.mediadelivery.net/play/33074/a46f1355-e6dd-4c06-a807-b53b50ff542b",
+        },
+        {
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/66829_2%20sec%20mathematics-24-35.pdf",
+        },
+        
+      ],
+    },
   ],
 };

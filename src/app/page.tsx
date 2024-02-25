@@ -13,29 +13,29 @@ import {
   Table,
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
-import { SignIn, SignOutButton, useAuth, useClerk, useSignIn } from "@clerk/nextjs";
+import {
+  SignIn,
+  SignOutButton,
+  useAuth,
+  useClerk,
+  useSignIn,
+  SignedIn,
+  SignedOut,
+} from "@clerk/nextjs";
 import { useEffect } from "react";
 
 export default function Component() {
- const {signOut} = useAuth();
-useEffect(() => {
-  signOut()
+  const { signOut } = useAuth();
+  useEffect(() => {
+    signOut();
 
-  return () => {
-    
-  }
-}, [])
+    return () => {};
+  }, []);
 
-  // function setCookie(name: string, value: string, minutes: number): void {
-  //   const date = new Date();
-  //   date.setTime(date.getTime() + minutes * 60 * 1000); // Add minutes to the current time
-  //   const expires = `expires=${date.toTimeString()}`;
-  //   document.cookie = `${name}=${value}; ${expires}; path=/`;
-  // }
-    const { isSignedIn } = useAuth();
+
   const { isLoaded, signIn } = useSignIn();
-// 
-  
+  //
+
   return (
     <div className="flex flex-col w-full min-h-screen">
       <header className="flex items-center sm:gap-3 h-16 px-4 border-b shrink-0 md:px-6">
@@ -46,9 +46,11 @@ useEffect(() => {
           >
             <span className="">Math Thief</span>{" "}
           </Link>
-         {isSignedIn && <span className="text-red-500  absolute right-0 mr-8 " >
-            <SignOutButton/>
-          </span>}
+          <SignedIn>
+            <span className="text-red-500  absolute right-0 mr-8 ">
+              <SignOutButton />
+            </span>
+          </SignedIn>
         </nav>
         <div className="flex items-center w-full gap-4 md:ml-auto md:gap-2 lg:gap-4">
           <form className="flex-1 ml-auto sm:flex-initial">
@@ -58,25 +60,24 @@ useEffect(() => {
       </header>
       <h1 className="mx-10 font-extrabold text-center text-5xl my-10 ">
         Welcome to the Math Thief where we steal Math Sessions 😘😍
-     
       </h1>
       <div className="text-center items-center text-4xl gap-16 flex mx-auto">
-     
         {!isLoaded && (
           <div className="text-5xl mx-auto my-auto font-bold text-red-700">
             Loading...
           </div>
         )}
-        
-        <SignIn
-          appearance={{ elements: { footer: "hidden", internal: "hidden" } }}
-        />
-        {isSignedIn && (
+        <SignedOut>
+          <SignIn
+            appearance={{ elements: { footer: "hidden", internal: "hidden" } }}
+          />
+        </SignedOut>
+        <SignedIn>
           <>
             <div className="mt-12 gap-10 flex flex-col">
-            <h2 className="text-5xl font-bold text-center text-yellow-500 flex ">
-            Choose a branch
-          </h2>
+              <h2 className="text-5xl font-bold text-center text-yellow-500 flex ">
+                Choose a branch
+              </h2>
               <Link
                 href="/puremath"
                 className="font-bold text-gray-400 hover:text-white"
@@ -91,8 +92,7 @@ useEffect(() => {
               </Link>
             </div>
           </>
-        )}
-       
+        </SignedIn>
       </div>
     </div>
   );

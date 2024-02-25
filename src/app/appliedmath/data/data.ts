@@ -39,6 +39,24 @@ export const myData: SessionsData = {
         },
       ],
     },
+    {
+      session: "Vertical motion under the effect of gravity",
+      lectures: [
+        {
+          name: "Explanation",
+          link: "https://iframe.mediadelivery.net/play/33074/80e0b962-fdf2-4316-9967-65c3918b09aa",
+        },
+       
+        {
+          name: "Classwork & HomeWork",
+          link: "https://iframe.mediadelivery.net/play/33074/1a87b94c-b1b9-4b1b-8240-624cac203e15",
+        },
+        {
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/42585_S2%20mechanics-1_merged.pdf",
+        },
+      ],
+    },
     // Add more sessions if needed
   ],
 };
