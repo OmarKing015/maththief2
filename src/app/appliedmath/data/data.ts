@@ -35,7 +35,7 @@ export const myData: SessionsData = {
         },
         {
           name: "PDF",
-          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/50267_S1%20mechanics.pdf",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/88975_S1%20mechanics-1_merged.pdf",
         },
       ],
     },
