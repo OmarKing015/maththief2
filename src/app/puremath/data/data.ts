@@ -15,7 +15,7 @@ interface SessionsData {
 export const myData: SessionsData = {
   Sessions: [
     {
-      session: " Arithmetic Sequence",
+      session: "Arithmetic Sequence",
       lectures: [
         {
           name: "Explanation part 1",
@@ -37,7 +37,7 @@ export const myData: SessionsData = {
       ],
     },
     {
-      session: " Arithmetic Series",
+      session: "Arithmetic Series",
       lectures: [
         {
           name: "Explanation",
@@ -50,6 +50,40 @@ export const myData: SessionsData = {
         {
           name: "PDF",
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/66829_2%20sec%20mathematics-24-35.pdf",
+        },
+        
+      ],
+    },{
+      session: "Geomitric Sequence",
+      lectures: [
+        {
+          name: "Explanation",
+          link: "https://iframe.mediadelivery.net/play/33074/0d406a5d-0646-4dc8-b2d0-8511cfcb2ae6",
+        },
+        {
+          name: "Classwork & HomeWork",
+          link: "https://iframe.mediadelivery.net/play/33074/0853aaf1-6dcc-402b-8145-f93d7b877f87",
+        },
+        {
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/38574_2sec.%20Math.%20Session%203.pdf",
+        },
+        
+      ],
+    },{
+      session: "Geomitric Series",
+      lectures: [
+        {
+          name: "Explanation",
+          link: "https://iframe.mediadelivery.net/play/33074/fe8c45d1-3008-4e1c-9cfb-d3d9413bc618",
+        },
+        {
+          name: "Classwork & HomeWork",
+          link: "https://iframe.mediadelivery.net/play/33074/5945c261-8188-4a15-870f-1c52976f5094",
+        },
+        {
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/38574_2sec.%20Math.%20Session%203.pdf",
         },
         
       ],
