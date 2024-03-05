@@ -87,6 +87,25 @@ export const myData: SessionsData = {
         },
         
       ],
-    },
+    },{
+      session: "Derivatives rules",
+      lectures: [
+        {
+          name: "Explanation",
+          link: "https://iframe.mediadelivery.net/play/33074/b8c625e5-5ba4-419e-bc66-29a68a7986b3?autoplay=true",
+        }
+        
+      ],
+    }
+    ,{
+      session: "Derivatives of trigonometric functions",
+      lectures: [
+        {
+          name: "Explanation",
+          link: "https://iframe.mediadelivery.net/play/33074/a86b2b1c-8e4c-4f56-bba3-ad652400126b",
+        }
+        
+      ],
+    }
   ],
 };
