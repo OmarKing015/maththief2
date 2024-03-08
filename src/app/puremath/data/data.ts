@@ -93,6 +93,9 @@ export const myData: SessionsData = {
         {
           name: "Explanation",
           link: "https://iframe.mediadelivery.net/play/33074/b8c625e5-5ba4-419e-bc66-29a68a7986b3?autoplay=true",
+        }, {
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/36557_2sec.%20Calculus%20(S1).pdf",
         }
         
       ],
@@ -103,6 +106,9 @@ export const myData: SessionsData = {
         {
           name: "Explanation",
           link: "https://iframe.mediadelivery.net/play/33074/a86b2b1c-8e4c-4f56-bba3-ad652400126b",
+        }, {
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/36557_2sec.%20Calculus%20(S1).pdf",
         }
         
       ],
