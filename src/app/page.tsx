@@ -5,6 +5,13 @@ import { Select } from "@/components/ui/select";
 import { dark } from "@clerk/themes";
 import { Button } from "@/components/ui/button";
 import {
+  OrganizationSwitcher,
+  clerkClient,
+  useOrganizationList,
+  useSession,
+} from "@clerk/nextjs";
+
+import {
   TableHead,
   TableRow,
   TableHeader,
@@ -13,6 +20,7 @@ import {
   Table,
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
+import { Protect, useUser } from "@clerk/nextjs";
 import {
   SignIn,
   SignOutButton,
@@ -23,18 +31,35 @@ import {
   SignedOut,
 } from "@clerk/nextjs";
 import { useEffect } from "react";
+import { OrganizationMembership } from "@clerk/clerk-sdk-node";
+import { Organization } from "@clerk/clerk-sdk-node";
+import { organizations } from "@clerk/nextjs/api";
 
 export default function Component() {
+  const { client } = useClerk();
+  const { setActive, userMemberships } = useOrganizationList({
+    userMemberships: {
+      infinite: true,
+    },
+  });
+  const { user } = useUser();
+  const userRole = user?.organizationMemberships[0].role;
   const { signOut } = useAuth();
   useEffect(() => {
     signOut();
-
-    return () => {};
+   
   }, []);
 
-
   const { isLoaded, signIn } = useSignIn();
-  //
+  const { session } = useSession(); //
+  console.log();
+useEffect(() => {
+  const slug = "org_2dMRi6JdXStJCjEgTmkuPiZErRN";
+
+  return () => {
+   clerkClient.organizations?.getOrganization({ slug })
+  }
+}, [signIn])
 
   return (
     <div className="flex flex-col w-full min-h-screen">
@@ -44,11 +69,12 @@ export default function Component() {
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
             href="/"
           >
-            <span className="">Math Thief</span>{" "}
+            <span className="">Math Thief</span>
           </Link>
           <SignedIn>
-            <span className="text-red-500  absolute right-0 mr-8 ">
-              <SignOutButton />
+            <span className="text-red-500 flex gap-16 absolute right-0 mr-8 ">
+              {/* <OrganizationSwitcher /> */}
+               <SignOutButton />
             </span>
           </SignedIn>
         </nav>
@@ -73,23 +99,32 @@ export default function Component() {
           />
         </SignedOut>
         <SignedIn>
+        
           <>
             <div className="mt-12 gap-10 flex flex-col">
               <h2 className="text-5xl font-bold text-center text-yellow-500 flex ">
                 Choose a branch
               </h2>
-              <Link
-                href="/puremath"
-                className="font-bold text-gray-400 hover:text-white"
-              >
-                Pure Math
-              </Link>
-              <Link
-                href="/appliedmath"
-                className="font-bold text-gray-400 hover:text-white"
-              >
-                Applied Math
-              </Link>
+              <Protect role="org:admin" fallback={<p>Not allowed</p>}>
+                <Link
+                  href="/puremath"
+                  className="font-bold text-gray-400 hover:text-white"
+                >
+                  Pure Math
+                </Link>
+                <Link
+                  href="/appliedmath"
+                  className="font-bold text-gray-400 hover:text-white"
+                >
+                  Applied Math
+                </Link>
+                <Link
+                  href="/chemistry"
+                  className="font-bold text-gray-400 hover:text-white"
+                >
+                  Chemistry
+                </Link>
+              </Protect>
             </div>
           </>
         </SignedIn>

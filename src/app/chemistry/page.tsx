@@ -56,13 +56,13 @@ const Component = () => {
                 Pure Math
               </Link>
               <Link
-                className=" font-bold "
+                className="text-gray-500 dark:text-gray-400 "
                 href="/appliedmath"
               >
                 Applied Math
               </Link>
               <Link
-                className=" text-gray-500 dark:text-gray-400 "
+                className=" font-bold "
                 href="/chemistry"
               >
                Chemistry
