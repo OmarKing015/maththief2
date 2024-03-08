@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/table";
 import { Card } from "@/components/ui/card";
 import { myData } from "./data/data";
+import { Protect, useUser } from "@clerk/nextjs";
 import {
   SignIn,
   SignOutButton,
@@ -25,6 +26,7 @@ import { redirect } from "next/navigation";
 import { useEffect } from "react";
 import { Router } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { Half1Icon } from "@radix-ui/react-icons";
 const Component = () => {
   const { isLoaded, signIn } = useSignIn();
   const { isSignedIn } = useAuth();
@@ -41,83 +43,88 @@ const Component = () => {
 
   return (
     <>
-    <SignedIn>
-      <div className="flex flex-col min-h-screen">
-        <header className="flex items-center h-16 px-4 border-b shrink-0">
-          <nav className="flex items-center justify-between w-full">
-            <Link
-              className="flex items-center gap-2 text-lg font-semibold"
-              href="/"
-            >
-              <span>Home</span>
-            </Link>
-            <div className="flex items-center gap-4">
-              <Link className="text-gray-500 dark:text-gray-400" href="/puremath">
-                Pure Math
-              </Link>
+      <SignedIn>
+        <div className="flex flex-col min-h-screen">
+          <header className="flex items-center h-16 px-4 border-b shrink-0">
+            <nav className="flex items-center justify-between w-full">
               <Link
-                className="text-gray-500 dark:text-gray-400 "
-                href="/appliedmath"
+                className="flex items-center gap-2 text-lg font-semibold"
+                href="/"
               >
-                Applied Math
+                <span>Home</span>
               </Link>
-              <Link
-                className=" font-bold "
-                href="/chemistry"
-              >
-               Chemistry
-              </Link>
-              <div className="text-red-500">
-                <SignOutButton signOutCallback={() => signOut()} />
+              <div className="flex items-center gap-4">
+                <Protect role="org:admin">
+                  <Link
+                    className="text-gray-500 dark:text-gray-400"
+                    href="/puremath"
+                  >
+                    Pure Math
+                  </Link>
+                  <Link
+                    className="text-gray-500 dark:text-gray-400 "
+                    href="/appliedmath"
+                  >
+                    Applied Math
+                  </Link>
+                </Protect>
+                <Link className=" font-bold " href="/chemistry">
+                  Chemistry
+                </Link>
+                <div className="text-red-500">
+                  <SignOutButton signOutCallback={() => signOut()} />
+                </div>
               </div>
-            </div>
-          </nav>
-        </header>
-        <main className="flex-1 p-4">
-          <div className="grid gap-16">
-            <Card>
-              <Table>
-                <TableHeader>
-                  <TableRow>
-                    <TableHead className="">Sessions</TableHead>
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {myData.Sessions.map((session) => (
-                    <div
-                      className="flex flex-col text-center sm:flex-row gap-8 sm:gap-0"
-                      key={session.session}
-                    >
-                      <TableCell className="font-medium text-center text-cyan-500">
-                        {session.session}
-                      </TableCell>
-                      <div className="sm:w-full flex text-center flex-col sm:flex-row gap-4 sm:gap-0 sm:justify-between">
-                        {session.lectures.map((lecture) => (
-                          <TableCell key={lecture.name}>
-                            <a href={lecture.link} className="w-full text-center">
-                              {lecture.name}
-                            </a>
-                          </TableCell>
-                        ))}
+            </nav>
+          </header>
+          <main className="flex-1 p-4">
+            <div className="grid gap-16">
+              <Card>
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="">Sessions</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {myData.Sessions.map((session) => (
+                      <div
+                        className="flex flex-col text-center sm:flex-row gap-8 sm:gap-0"
+                        key={session.session}
+                      >
+                        <TableCell className="font-medium text-center text-cyan-500">
+                          {session.session}
+                        </TableCell>
+                        <div className="sm:w-full flex text-center flex-col sm:flex-row gap-4 sm:gap-0 sm:justify-between">
+                          {session.lectures.map((lecture) => (
+                            <TableCell key={lecture.name}>
+                              <a
+                                href={lecture.link}
+                                className="w-full text-center"
+                              >
+                                {lecture.name}
+                              </a>
+                            </TableCell>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </TableBody>
-              </Table>
-            </Card>
-          </div>
-        </main>
-      </div>
-    </SignedIn>
-    <SignedOut>
-      <div className="items-center mx-auto my-auto justify-center align-middle flex mt-40">
-        <SignIn
-          afterSignInUrl={"/puremath"}
-          appearance={{ elements: { footer: "hidden", internal: "hidden" } }}
-        />{" "}
-      </div>
-    </SignedOut>
-  </>
+                    ))}
+                  </TableBody>
+                </Table>
+              </Card>
+            </div>
+          </main>
+        </div>
+      </SignedIn>
+      <SignedOut>
+        <div className="items-center mx-auto my-auto justify-center align-middle flex mt-40">
+          <SignIn
+            afterSignInUrl={"/puremath"}
+            appearance={{ elements: { footer: "hidden", internal: "hidden" } }}
+          />{" "}
+        </div>
+      </SignedOut>
+    </>
   );
 };
 

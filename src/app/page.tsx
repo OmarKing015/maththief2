@@ -45,21 +45,20 @@ export default function Component() {
   const { user } = useUser();
   const userRole = user?.organizationMemberships[0].role;
   const { signOut } = useAuth();
-  useEffect(() => {
-    signOut();
-   
-  }, []);
+  // useEffect(() => {
+  //   signOut();
+  // }, []);
 
   const { isLoaded, signIn } = useSignIn();
   const { session } = useSession(); //
   console.log();
-useEffect(() => {
-  const slug = "org_2dMRi6JdXStJCjEgTmkuPiZErRN";
+  useEffect(() => {
+    const slug = "org_2dMRi6JdXStJCjEgTmkuPiZErRN";
 
-  return () => {
-   clerkClient.organizations?.getOrganization({ slug })
-  }
-}, [signIn])
+    return () => {
+      clerkClient.organizations?.getOrganization({ slug });
+    };
+  }, [signIn]);
 
   return (
     <div className="flex flex-col w-full min-h-screen">
@@ -69,12 +68,12 @@ useEffect(() => {
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
             href="/"
           >
-            <span className="">Math Thief</span>
+            <span className="">The Thief</span>
           </Link>
           <SignedIn>
             <span className="text-red-500 flex gap-16 absolute right-0 mr-8 ">
               {/* <OrganizationSwitcher /> */}
-               <SignOutButton />
+              <SignOutButton />
             </span>
           </SignedIn>
         </nav>
@@ -85,7 +84,7 @@ useEffect(() => {
         </div>
       </header>
       <h1 className="mx-10 font-extrabold text-center text-5xl my-10 ">
-        Welcome to the Math Thief where we steal Math Sessions 😘😍
+        Welcome to the Thief where we steal all the Sessions 😘😍
       </h1>
       <div className="text-center items-center text-4xl gap-16 flex mx-auto">
         {!isLoaded && (
@@ -99,13 +98,22 @@ useEffect(() => {
           />
         </SignedOut>
         <SignedIn>
-        
           <>
             <div className="mt-12 gap-10 flex flex-col">
               <h2 className="text-5xl font-bold text-center text-yellow-500 flex ">
-                Choose a branch
+                Choose a subject
               </h2>
-              <Protect role="org:admin" fallback={<p>Not allowed</p>}>
+              <Protect
+                role="org:admin"
+                fallback={
+                  <Link
+                    href="/chemistry"
+                    className="font-bold text-gray-400 hover:text-white"
+                  >
+                    Chemistry
+                  </Link>
+                }
+              >
                 <Link
                   href="/puremath"
                   className="font-bold text-gray-400 hover:text-white"

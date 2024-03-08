@@ -12,7 +12,7 @@ import { useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Math Thief",
+  title: "The Thief",
   description: "",
 };
 
