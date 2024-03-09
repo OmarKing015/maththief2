@@ -68,7 +68,7 @@ export default function Component() {
             className="flex items-center gap-2 text-lg font-semibold md:text-base"
             href="/"
           >
-            <span className="">The Thief</span>
+            <span className="">The Dealer</span>
           </Link>
           <SignedIn>
             <span className="text-red-500 flex gap-16 absolute right-0 mr-8 ">
@@ -84,7 +84,7 @@ export default function Component() {
         </div>
       </header>
       <h1 className="mx-10 font-extrabold text-center text-5xl my-10 ">
-        Welcome to the Thief where we steal all the Sessions 😘😍
+        Welcome to <em>The Dealer</em> where we steal all the Sessions. 😘😍
       </h1>
       <div className="text-center items-center text-4xl gap-16 flex mx-auto">
         {!isLoaded && (
