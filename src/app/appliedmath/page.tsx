@@ -67,7 +67,7 @@ const Component = () => {
         <SignedIn>
           <div className="flex flex-col min-h-screen">
             <header className="flex items-center h-16 px-4 border-b shrink-0">
-              <navbar />
+              <navbar/>
             </header>
             <main className="flex-1 p-4">
               <div className="grid gap-16">
