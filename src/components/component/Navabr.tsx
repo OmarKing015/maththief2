@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Protect, useUser } from "@clerk/nextjs";
 
-export default function navbar() {
+export default function Navbar() {
     const [currentPage, setCurrentPage] = useState("/")
     const change = (e) => {
 

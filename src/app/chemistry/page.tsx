@@ -27,7 +27,7 @@ import { useEffect } from "react";
 import { Router } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Half1Icon } from "@radix-ui/react-icons";
-import navbar from "@/components/component/navabr";
+import Navbar from "@/components/component/Navabr";
 const Component = () => {
   const { isLoaded, signIn } = useSignIn();
   const { isSignedIn } = useAuth();
@@ -48,7 +48,7 @@ const Component = () => {
         <div className="flex flex-col min-h-screen">
           <header className="flex items-center h-16 px-4 border-b shrink-0">
           <header className="flex items-center h-16 px-4 border-b shrink-0">
-              <navbar/>
+              <Navbar/>
             </header>
           </header>
           <main className="flex-1 p-4">

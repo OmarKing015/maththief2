@@ -26,7 +26,7 @@ import { useEffect } from "react";
 import { Router } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Protect, useUser } from "@clerk/nextjs";
-import navbar from "@/components/component/navabr";
+import Navbar from "@/components/component/Navabr";
 
 const Component = () => {
   const { isLoaded, signIn } = useSignIn();
@@ -67,7 +67,7 @@ const Component = () => {
         <SignedIn>
           <div className="flex flex-col min-h-screen">
             <header className="flex items-center h-16 px-4 border-b shrink-0">
-              <navbar/>
+              <Navbar/>
             </header>
             <main className="flex-1 p-4">
               <div className="grid gap-16">
