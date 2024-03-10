@@ -98,7 +98,7 @@ const Component = () => {
                         <div className="sm:w-full flex text-center flex-col sm:flex-row gap-4 sm:gap-0 sm:justify-between">
                           {session.lectures.map((lecture) => (
                             <TableCell key={lecture.name}>
-                              <a
+                              <a target="_blank"
                                 href={lecture.link}
                                 className="w-full text-center"
                               >

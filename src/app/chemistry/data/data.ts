@@ -15,6 +15,34 @@ interface SessionsData {
 export const myData: SessionsData = {
   Sessions: [
     {
+      session: "The Covalent Bond",
+      lectures: [
+        {
+          name: "Octet",
+          link: "https://docsend.com/view/63ws5zyhew6cb4gc",
+        },
+        {
+          name: "VSPER 1",
+          link: "https://docsend.com/view/q5vgnwmfns6ctr2a",
+        },
+        {
+          name: "VSPER 2",
+          link: "https://docsend.com/view/2k2tmk9x3uivun9g",
+        },
+        {
+          name: "HomeWork",
+          link: "https://www.youtube.com/watch?v=tlF2-Yeh-k0"
+
+        },
+
+        {
+          name: "creative 2",
+          link: "https://www.youtube.com/watch?v=nGFOIvLEblc"
+
+        },
+      ],
+    },
+    {
       session: "The valence bond theory",
       lectures: [
         {
@@ -32,13 +60,13 @@ export const myData: SessionsData = {
         {
           name: "creative 3",
           link: "https://www.youtube.com/watch?v=P-9-JQvXMaQ"
-          
+
         },
-        
+
         {
           name: "creative 4",
           link: "https://www.youtube.com/watch?v=yq__0XA57vQ"
-          
+
         },
       ],
     },
@@ -59,7 +87,7 @@ export const myData: SessionsData = {
         }
       ],
     },
-   
+
     // Add more sessions if needed
   ],
 };
