@@ -14,6 +14,7 @@ import { Select } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 export default function Navbar() {
     const [currentPage, setCurrentPage] = useState("/")
+    const { signOut } = useClerk();
     return (
         <nav className="flex items-center justify-between w-full">
             <Link
