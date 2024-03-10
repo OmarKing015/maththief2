@@ -28,13 +28,13 @@ export default function Navbar() {
                     className={`text-gray-500 dark:text-gray-400 ${currentPage === "/puremath" && "font-bold text-black dark:text-white"
                         }`}
                     href="/puremath"
-                    onChange={setCurrentPage("/puremath")}
+                    onClick={setCurrentPage("/puremath")}
                 >
                     Pure Math
                 </Link>
                 <Link className={`text-gray-500 dark:text-gray-400 ${currentPage === "/appliedmath" && "font-bold text-black dark:text-white"
                     }`}
-                    onChange={setCurrentPage("/appliedmath")}
+                    onClick={setCurrentPage("/appliedmath")}
                      href="/appliedmath">
                     Applied Math
                 </Link>
@@ -44,7 +44,7 @@ export default function Navbar() {
                         currentPage === "/chemistry" && "font-bold text-black dark:text-white"
                       }`}
                    
-                    onChange={setCurrentPage("/chemistry")}
+                    onClick={setCurrentPage("/chemistry")}
                     href="/chemistry"
                 >
                     Chemistry
