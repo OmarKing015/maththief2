@@ -1,6 +1,17 @@
 import { useState } from "react"
-import { Protect, useUser } from "@clerk/nextjs";
-
+import {
+    Protect,
+    SignIn,
+    SignOutButton,
+    SignedIn,
+    SignedOut,
+    useAuth,
+    useClerk,
+    useSignIn,
+  } from "@clerk/nextjs";
+  import Link from "next/link";
+import { Select } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
 export default function Navbar() {
     const [currentPage, setCurrentPage] = useState("/")
     return (
