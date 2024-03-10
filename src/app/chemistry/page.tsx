@@ -27,6 +27,7 @@ import { useEffect } from "react";
 import { Router } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Half1Icon } from "@radix-ui/react-icons";
+import navbar from "@/components/component/navabr";
 const Component = () => {
   const { isLoaded, signIn } = useSignIn();
   const { isSignedIn } = useAuth();
@@ -46,36 +47,9 @@ const Component = () => {
       <SignedIn>
         <div className="flex flex-col min-h-screen">
           <header className="flex items-center h-16 px-4 border-b shrink-0">
-            <nav className="flex items-center justify-between w-full">
-              <Link
-                className="flex items-center gap-2 text-lg font-semibold"
-                href="/"
-              >
-                <span>Home</span>
-              </Link>
-              <div className="flex items-center gap-4">
-                <Protect role="org:admin">
-                  <Link
-                    className="text-gray-500 dark:text-gray-400"
-                    href="/puremath"
-                  >
-                    Pure Math
-                  </Link>
-                  <Link
-                    className="text-gray-500 dark:text-gray-400 "
-                    href="/appliedmath"
-                  >
-                    Applied Math
-                  </Link>
-                </Protect>
-                <Link className=" font-bold " href="/chemistry">
-                  Chemistry
-                </Link>
-                <div className="text-red-500">
-                  <SignOutButton signOutCallback={() => signOut()} />
-                </div>
-              </div>
-            </nav>
+          <header className="flex items-center h-16 px-4 border-b shrink-0">
+              <navbar/>
+            </header>
           </header>
           <main className="flex-1 p-4">
             <div className="grid gap-16">

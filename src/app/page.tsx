@@ -34,6 +34,7 @@ import { useEffect } from "react";
 import { OrganizationMembership } from "@clerk/clerk-sdk-node";
 import { Organization } from "@clerk/clerk-sdk-node";
 import { organizations } from "@clerk/nextjs/api";
+import navbar from "@/components/component/navabr";
 
 export default function Component() {
   const { client } = useClerk();
