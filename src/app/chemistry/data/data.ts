@@ -42,6 +42,23 @@ export const myData: SessionsData = {
         },
       ],
     },
+    {
+      session: "Types of Bonds",
+      lectures: [
+        {
+          name: "Coordinate Bond",
+          link: "https://docsend.com/view/6gqx3hbm4c8ziwi8",
+        },
+        {
+          name: "Hydrogen Bond",
+          link: "https://docsend.com/view/bzz7356i85k56seu",
+        },
+        {
+          name: "Metallic Bond",
+          link: "https://docsend.com/view/t5hdvtjadfb9sna9",
+        }
+      ],
+    },
    
     // Add more sessions if needed
   ],

@@ -83,8 +83,8 @@ export default function Component() {
           </form>
         </div>
       </header>
-      <h1 className="mx-10 font-extrabold text-center text-5xl my-10 ">
-        Welcome to <em> The Dealer </em>  where we steal all the Sessions. 😘😍
+      <h1 className="mx-10 font-extrabold text-center text-5xl my-10">
+        Welcome to <strong> The Dealer </strong> where we steal all the Sessions. 😘😍
       </h1>
       <div className="text-center items-center text-4xl gap-16 flex mx-auto">
         {!isLoaded && (
