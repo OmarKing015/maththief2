@@ -74,6 +74,19 @@ export const myData: SessionsData = {
         },
       ],
     }
+    ,{ 
+      session: "Gravitational force",
+      lectures: [
+        {
+          name: "Explanation",
+          link: "https://iframe.mediadelivery.net/play/33074/99718ec6-2a1c-47c3-a0aa-f921023b5841",
+        },
+        {
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/40878_Session%204%20mechanics_merged.pdf",
+        },
+      ],
+    }
     // Add more sessions if needed
   ],
 };

@@ -93,6 +93,10 @@ export const myData: SessionsData = {
         {
           name: "Explanation",
           link: "https://iframe.mediadelivery.net/play/33074/b8c625e5-5ba4-419e-bc66-29a68a7986b3?autoplay=true",
+        },
+        {
+          name: "Classwork & Homework",
+          link: "https://iframe.mediadelivery.net/play/33074/d1d796b9-13ef-4e09-9de2-6684ad657895",
         }, {
           name: "PDF",
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/36557_2sec.%20Calculus%20(S1).pdf",
