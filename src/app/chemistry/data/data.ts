@@ -57,22 +57,22 @@ export const myData: SessionsData = {
           name: "Homework",
           link: "https://www.youtube.com/watch?v=YRtK8m78FvY",
         },
-        ,
+        
         {
           name: "Hybirdiztation Summary",
           link: "https://youtu.be/JULeAjZSHcE?si=bnKpYT9RbtGB3CTE",
         },
-        ,
+        
         {
           name: "Hybirdiztation HW-1",
           link: "https://youtu.be/JULeAjZSHcE?si=bnKpYT9RbtGB3CTE",
         },
-        ,
+        
         {
           name: "Hybirdiztation HW-2",
           link: "https://youtu.be/PrdjjLQiYGo?si=CMjlc6TFE68_ZwC1",
         },
-        ,
+        
         {
           name: "Hybirdiztation HW-3",
           link: "https://youtu.be/92mYtLZWuZQ?si=YnMrjuhMIgRBYR3E",
