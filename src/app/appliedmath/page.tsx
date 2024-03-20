@@ -111,7 +111,7 @@ const Component = () => {
         <SignedOut>
           <div className="items-center mx-auto my-auto justify-center align-middle flex mt-40">
             <SignIn
-              afterSignInUrl={"/puremath"}
+              afterSignInUrl={"/appliedmath"}
               appearance={{
                 elements: { footer: "hidden", internal: "hidden" },
               }}
