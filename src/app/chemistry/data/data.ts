@@ -106,7 +106,7 @@ export const myData: SessionsData = {
           link: "https://docsend.com/view/t5hdvtjadfb9sna9",
         }
         ,{
-          name: "Important Questions",
+          name: "Homework",
           link: "https://youtu.be/7fFJ1wlD-d4?si=0Ot_m0CPbH9-Ufko",
         }
       ],
