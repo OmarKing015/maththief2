@@ -33,7 +33,6 @@ export const myData: SessionsData = {
           name: "PDF",
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/60404_print-2-4-23.pdf",
         },
-        
       ],
     },
     {
@@ -51,9 +50,9 @@ export const myData: SessionsData = {
           name: "PDF",
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/66829_2%20sec%20mathematics-24-35.pdf",
         },
-        
       ],
-    },{
+    },
+    {
       session: "Geomitric Sequence",
       lectures: [
         {
@@ -68,9 +67,9 @@ export const myData: SessionsData = {
           name: "PDF",
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/38574_2sec.%20Math.%20Session%203.pdf",
         },
-        
       ],
-    },{
+    },
+    {
       session: "Geomitric Series",
       lectures: [
         {
@@ -85,9 +84,9 @@ export const myData: SessionsData = {
           name: "PDF",
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/38574_2sec.%20Math.%20Session%203.pdf",
         },
-        
       ],
-    },{
+    },
+    {
       session: "Derivatives rules",
       lectures: [
         {
@@ -97,25 +96,59 @@ export const myData: SessionsData = {
         {
           name: "Classwork & Homework",
           link: "https://iframe.mediadelivery.net/play/33074/d1d796b9-13ef-4e09-9de2-6684ad657895",
-        }, {
+        },
+        {
           name: "PDF",
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/36557_2sec.%20Calculus%20(S1).pdf",
-        }
-        
+        },
       ],
-    }
-    ,{
+    },
+    {
       session: "Derivatives of trigonometric functions",
       lectures: [
         {
           name: "Explanation",
           link: "https://iframe.mediadelivery.net/play/33074/a86b2b1c-8e4c-4f56-bba3-ad652400126b",
-        }, {
+        },
+        {
           name: "PDF",
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/36557_2sec.%20Calculus%20(S1).pdf",
-        }
-        
+        },
       ],
-    }
+    },
+    {
+      session: "Rate of change & differentiability",
+      lectures: [
+        {
+          name: "Explanation",
+          link: "https://iframe.mediadelivery.net/play/33074/449bd5c3-a3f5-4e8c-9134-f425775f7630",
+        },
+        {
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/39823_2sec.%20Calculus.%20Rate%20of%20change.pdf",
+        },
+      ],
+    },
+    {
+      session: "Angle of elevation and depression",
+      lectures: [
+        {
+          name: "Explanation 1",
+          link: "https://iframe.mediadelivery.net/play/33074/4c2c26fd-551a-422a-8d6d-a20f9e0dd28b",
+        },
+        {
+          name: "Explanation 2",
+          link: "https://iframe.mediadelivery.net/play/33074/b8bfc99d-c74e-4f14-98c4-5c6de63fd679",
+        },
+        {
+          name: "Classwork & Homework",
+          link: "https://iframe.mediadelivery.net/play/33074/f571cf64-ca74-45ae-a1e1-d98e77d5a488",
+        },
+        {
+          name: "PDF",
+          link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/103_2sec.%20Trig.pdf",
+        },
+      ],
+    },
   ],
 };

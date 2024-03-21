@@ -54,9 +54,10 @@ export const myData: SessionsData = {
         {
           name: "PDF",
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/42585_S2%20mechanics-1_merged.pdf",
-        }, 
+        },
       ],
-    }, {
+    },
+    {
       session: "RECTILIEAR MOTION",
       lectures: [
         {
@@ -73,8 +74,8 @@ export const myData: SessionsData = {
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/87162_2sec.%20Mech.%20Session%203.pdf",
         },
       ],
-    }
-    ,{ 
+    },
+    {
       session: "Gravitational force",
       lectures: [
         {
@@ -86,8 +87,20 @@ export const myData: SessionsData = {
           link: "https://omar-sherbeni.com/student/G2bMQTPtMV3KGLojM7rE/uploads/files/40878_Session%204%20mechanics_merged.pdf",
         },
       ],
-    }
+    },
+    {
+      session: "Probability",
+      lectures: [
+        {
+          name: "Explanation",
+          link: "https://iframe.mediadelivery.net/play/33074/d6e036dd-bbd7-44d0-a582-81ddd026f5f4",
+        },
+        {
+          name: "Classwork & Homework",
+          link: "https://iframe.mediadelivery.net/play/33074/61646f38-3c80-4686-90d2-2b7e9a9c37ff",
+        },
+      ],
+    },
     // Add more sessions if needed
   ],
 };
-
