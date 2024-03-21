@@ -91,6 +91,16 @@ export const myData: SessionsData = {
       ],
     },
     {
+      session: "Unit 4 Introduction",
+      lectures: [
+        {
+          name: "A1 Properties",
+          link: "https://docsend.com/view/v5mgdmtt26zgz5c2",
+        },
+        
+      ],
+    },
+    {
       session: "Types of Bonds",
       lectures: [
         {
